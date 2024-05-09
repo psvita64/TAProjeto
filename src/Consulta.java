@@ -1,4 +1,6 @@
-public class Consulta extends Intervencao{
+import java.io.Serializable;
+
+public class Consulta extends Intervencao implements Serializable{
 
     private float duracao;
 
@@ -14,4 +16,9 @@ public class Consulta extends Intervencao{
     public void setDuracao(float duracao) {
         this.duracao = duracao;
     }
+
+    public String toString(){
+        return "Consulta: " + getVeterenario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
+    }
+
 }

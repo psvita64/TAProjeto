@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Animal {
+
+public class Animal implements Serializable{
 
     private int id;
     private String nome;
@@ -78,5 +80,9 @@ public class Animal {
 
     public void setListaInterA(ArrayList<Intervencao> listaInterA){
         this.listaInterA = listaInterA;
+    }
+
+    public String toString(){
+        return "Animal: " + getId() + " " + getNome() + " " + getEspecie() + " " + getGenero() + " " + getPeso() + " " + getCliente().getNome();
     }
 }

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Cliente {
+public class Cliente implements Serializable {
 
     private int nif;
     private String nome;
@@ -45,5 +46,9 @@ public class Cliente {
 
     public void setContacto(int contacto) {
         this.contacto = contacto;
+    }
+
+    public String toString(){
+        return "Nome: "+getNome()+" Nif: "+getNif()+" Contacto: "+getContacto()+" Morada: "+getMorada();
     }
 }

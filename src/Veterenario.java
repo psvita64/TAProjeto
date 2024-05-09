@@ -1,14 +1,16 @@
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Veterenario {
+public class Veterenario implements Serializable{
 
     private int nif;
     private String nome;
     private int id_OrdemVet;
     private int contacto;
-    private 
 
     private ArrayList<Intervencao> listaInterV;
+
+    private ArrayList<HorarioD> ListaHorario;
 
     public Veterenario(int nif, String nome, int id_OrdemVet, int contacto){
         this.nif = nif;
@@ -16,6 +18,7 @@ public class Veterenario {
         this.id_OrdemVet = id_OrdemVet;
         this.contacto = contacto;
         listaInterV = new ArrayList<Intervencao>();
+        ListaHorario = new ArrayList<HorarioD>();
     }
 
     public int getNif() {
@@ -56,5 +59,9 @@ public class Veterenario {
 
     public void setListaInter(ArrayList<Intervencao> listaInter) {
         this.listaInterV = listaInter;
+    }
+
+    public String toString(){
+        return "Veterenario: " + getNif() + " " + getNome() + " " + getId_OrdemVet() + " " + getContacto();
     }
 }

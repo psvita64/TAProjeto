@@ -1,4 +1,5 @@
-public abstract class Intervencao{
+import java.io.Serializable;
+public abstract class Intervencao implements Serializable{
 
     private Veterenario veterenario;
 
@@ -11,6 +12,22 @@ public abstract class Intervencao{
         this.veterenario = veterenario;
         this.preco = preco;
         this.deslocacao = deslocacao;
+    }
+
+    public Veterenario getVeterenario() {
+        return veterenario;
+    }
+
+    public void setVeterenario(Veterenario veterenario) {
+        this.veterenario = veterenario;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
     }
 
     public float getPreco() {
@@ -30,6 +47,10 @@ public abstract class Intervencao{
     }
 
     public abstract float getDuracao();
+
+    public String toString(){
+        return "Intervencao: " + getVeterenario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
+    }
 
 
 }

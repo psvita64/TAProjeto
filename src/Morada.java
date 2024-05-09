@@ -1,4 +1,6 @@
-public class Morada {
+import java.io.Serializable;
+
+public class Morada implements Serializable{
 
     private String rua;
     private int numero;
@@ -42,5 +44,9 @@ public class Morada {
 
     public void setLocalidade(String localidade) {
         this.localidade = localidade;
+    }
+
+    public String toString(){
+        return "Rua: "+getRua()+" Numero: "+getNumero()+" Codigo Postal: "+getCodigo_postal()+" Localidade: "+getLocalidade();
     }
 }

@@ -1,4 +1,6 @@
-public class Cirurgia extends Intervencao{
+import java.io.Serializable;
+
+public class Cirurgia extends Intervencao implements Serializable{
 
     private int duracao;
 
@@ -13,5 +15,9 @@ public class Cirurgia extends Intervencao{
 
     public void setDuracao(int duracao) {
         this.duracao = duracao;
+    }
+
+    public String toString(){
+        return "Cirurgia: " + getVeterenario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
     }
 }
