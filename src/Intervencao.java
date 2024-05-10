@@ -1,25 +1,25 @@
 import java.io.Serializable;
 public abstract class Intervencao implements Serializable{
 
-    private Veterenario veterenario;
+    private Veterinario veterinario;
 
     private Animal animal;
     private float preco;
     private boolean deslocacao;
 
-    public Intervencao(Veterenario veterenario,Animal animal, float preco, boolean deslocacao){
+    public Intervencao(Veterinario veterenario,Animal animal, float preco, boolean deslocacao){
         this.animal = animal;
-        this.veterenario = veterenario;
+        this.veterinario = veterenario;
         this.preco = preco;
         this.deslocacao = deslocacao;
     }
 
-    public Veterenario getVeterenario() {
-        return veterenario;
+    public Veterinario getVeterinario() {
+        return veterinario;
     }
 
-    public void setVeterenario(Veterenario veterenario) {
-        this.veterenario = veterenario;
+    public void setVeterenario(Veterinario veterenario) {
+        this.veterinario = veterenario;
     }
 
     public Animal getAnimal() {
@@ -49,7 +49,7 @@ public abstract class Intervencao implements Serializable{
     public abstract float getDuracao();
 
     public String toString(){
-        return "Intervencao: " + getVeterenario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
+        return "Intervencao: " + getVeterinario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
     }
 
 

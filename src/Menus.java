@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menus {
     public static Scanner sc = new Scanner(System.in);
 
-    public static void  menuCliente() {
+    public static void  menuCliente(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes) {
         int op = 0;
         do {
             System.out.println("---------Menu---------");
@@ -17,7 +18,7 @@ public class Menus {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    CriarCliente();
+                    Gestor.AddCliente(sc, listaClientes);
                     break;
                 case 2:
                     break;
@@ -35,7 +36,7 @@ public class Menus {
     }
 
 
-  public static void menuAnimal(){
+  public static void menuAnimal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes){
         int op = 0;
         do{
             System.out.println("---------Menu---------");
@@ -43,14 +44,17 @@ public class Menus {
             System.out.println("2- Listar Animais");
             System.out.println("3- Listar Intervenções do Animal");
             System.out.println("4- Remover Animal");
-            System.out.println("0- Sair");
+            System.out.println("0- Voltar");
             System.out.println("----------------------");
             System.out.println("Opção: ");
             op = sc.nextInt();
             switch(op){
                 case 1:
+                    Gestor.criarAnimal(sc, listaAnimal, listaClientes);
+
                     break;
                 case 2:
+                    Gestor.listarAnimais(listaAnimal);
                     break;
                 case 3:
                     break;
@@ -65,7 +69,7 @@ public class Menus {
             }
         }while(op != 0);
     }
-    public static void menuIntervencao() {
+    public static void menuIntervencao(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes) {
         int op = 0;
         do {
             System.out.println("---------Menu---------");
@@ -107,7 +111,7 @@ public class Menus {
         } while (op != 0) ;
     }
 
-    public static void menuVeterinario(){
+    public static void menuVeterinario(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes){
         int op = 0;
         do{
             System.out.println("---------Menu---------");
@@ -139,7 +143,7 @@ public class Menus {
             }
         }while(op != 0);
     }
-    public static void menuPrincipal() {
+    public static void menuPrincipal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes) {
         int op = 0;
 
         do {
@@ -154,16 +158,16 @@ public class Menus {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    menuAnimal();
+                    //menuAnimal();
                     break;
                 case 2:
-                    menuCliente();
+                    //menuCliente();
                     break;
                 case 3:
-                    menuVeterinario();
+                    //menuVeterinario();
                     break;
                 case 4:
-                    menuIntervencao();
+                    //menuIntervencao();
                     break;
                 case 0:
                     System.exit(0);
@@ -174,16 +178,6 @@ public class Menus {
             }
         } while (op != 0);
 
-
-    }
-
-    void CriarCliente(){
-        String nome;
-        int NIF;
-        int contacto;
-        while (nome.noisEme.nome.IsemptyisEmpty()) {
-        }
-        }
 
     }
 

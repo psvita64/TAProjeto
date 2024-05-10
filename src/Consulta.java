@@ -4,8 +4,8 @@ public class Consulta extends Intervencao implements Serializable{
 
     private float duracao;
 
-    public Consulta(Veterenario veterenario,Animal animal, float preco, boolean deslocacao){
-        super(veterenario, animal,preco,deslocacao);
+    public Consulta(Veterinario veterinario,Animal animal, float preco, boolean deslocacao){
+        super(veterinario, animal,preco,deslocacao);
         duracao = 0.5F;
     }
 
@@ -18,7 +18,7 @@ public class Consulta extends Intervencao implements Serializable{
     }
 
     public String toString(){
-        return "Consulta: " + getVeterenario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
+        return "Consulta: " + getVeterinario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
     }
 
 }
