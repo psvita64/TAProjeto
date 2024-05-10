@@ -18,13 +18,16 @@ public class Menus {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    Gestor.AddCliente(sc, listaClientes);
+                    Gestor.AddCliente( listaClientes);
                     break;
                 case 2:
+                    Gestor.RemoverCliente(listaClientes);
                     break;
                 case 3:
+                    Gestor.ListarClientes(listaClientes);
                     break;
                 case 4:
+                    Gestor.ListarClienteEAnimais(listaClientes,listaAnimal);
                     break;
                 default:
                     System.out.println("Opção inválida.");
@@ -36,7 +39,7 @@ public class Menus {
     }
 
 
-  public static void menuAnimal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes){
+  public static void menuAnimal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes, ArrayList<Data> listaData){
         int op = 0;
         do{
             System.out.println("---------Menu---------");
@@ -50,15 +53,46 @@ public class Menus {
             op = sc.nextInt();
             switch(op){
                 case 1:
-                    Gestor.criarAnimal(sc, listaAnimal, listaClientes);
-
+                    Gestor.criarAnimal( listaAnimal, listaClientes);
                     break;
                 case 2:
                     Gestor.listarAnimais(listaAnimal);
                     break;
                 case 3:
+                    do{
+                        op = 0;
+                        System.out.println("Que intervenções deseja listar?");
+                        System.out.println("1- Passadas");
+                        System.out.println("2- Hoje");
+                        System.out.println("3- Futuras");
+                        System.out.println("4- Todas");
+                        System.out.println("0- Voltar\n");
+                        System.out.println("Opção:");
+                        op = sc.nextInt();
+                        sc.nextLine();
+                        switch (op){
+                            case 1:
+                                Gestor.listarIntervencoesAnimalPassadas(listaIntervencoes,listaClientes,listaAnimal,listaData);
+                                break;
+                            case 2:
+                                Gestor.listarIntervencoesAnimalHoje(listaIntervencoes,listaClientes,listaAnimal, listaData);
+                                break;
+                            case 3:
+                                Gestor.listarIntervencoesAnimalFuturas(listaIntervencoes,listaClientes,listaAnimal, listaData);
+                                break;
+                            case 4:
+                                Gestor.listarIntervencoesAnimal(listaIntervencoes,listaAnimal,listaClientes);
+                                break;
+                            case 0:
+                                break;
+                            default:
+                                System.out.println("Opção inválida.");
+                                break;
+                        }
+                    }while(op != 0 && op != 1 && op != 2 && op != 3 && op != 4);
                     break;
                 case 4:
+                    Gestor.RemoverAnimal(listaAnimal);
                     break;
                 case 0:
                     System.exit(0);
@@ -69,38 +103,28 @@ public class Menus {
             }
         }while(op != 0);
     }
-    public static void menuIntervencao(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes) {
+    public static void menuIntervencao(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes, ArrayList<Data> listaData){
         int op = 0;
         do {
             System.out.println("---------Menu---------");
             System.out.println("1- Agendar Intervenção");
-            System.out.println("2- Listar Intervenções(Data)");
-            System.out.println("3- Listar Intervenções(Veterinário)");
-            System.out.println("4- Listar Intervenções(Veterinário+Data)");
-            System.out.println("5- Listar Intervenções(Animal Passadas)");
-            System.out.println("6- Listar Intervenções(Animal Hoje)");
-            System.out.println("7- Listar Intervenções(Animal Futuras)");
-            System.out.println("8- Listar Intervenções(Animal)");
+            System.out.println("2- Listar Intervenções");
+            System.out.println("3- Listar Intervenções(c/Data)");
             System.out.println("0- Sair");
             System.out.println("----------------------");
             System.out.print("Opção: ");
             op = sc.nextInt();
             switch (op) {
                 case 1:
+                    Gestor.addIntervencao(listaIntervencoes,listaClientes,listaVeterinarios,listaAnimal,listaData);
                     break;
                 case 2:
+                    Gestor.ListarIntervencoes(listaIntervencoes);
                     break;
                 case 3:
+                    Gestor.ListarIntervencoesData(listaIntervencoes,listaData);
                     break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
+                case 0:
                     break;
                 default:
                     System.out.println("Opção inválida.");
@@ -111,28 +135,38 @@ public class Menus {
         } while (op != 0) ;
     }
 
-    public static void menuVeterinario(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes){
+    public static void menuVeterinario(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes, ArrayList<Data> listaDatas){
         int op = 0;
         do{
             System.out.println("---------Menu---------");
             System.out.println("1- Adicionar Veterinario");
             System.out.println("2- Listar Veterinarios");
             System.out.println("3- Listar Intervenções do Veterinario");
-            System.out.println("5- Listar Animais do Veterinario");
-            System.out.println("6- Listar Clientes do Veterinario");
-            System.out.println("4- Remover Veterinario");
+            System.out.println("4- Listar Animais do Veterinario");
+            System.out.println("5- Listar Clientes do Veterinario");
+            System.out.println("6- Remover Veterinario");
             System.out.println("0- Sair");
             System.out.println("----------------------");
             System.out.println("Opção: ");
             op = sc.nextInt();
             switch(op){
                 case 1:
+                    Gestor.addIntervencao(listaIntervencoes,listaClientes,listaVeterinarios,listaAnimal,listaDatas);
                     break;
                 case 2:
+                    Gestor.ListarVeterinarios(listaVeterinarios);
                     break;
                 case 3:
+                    Gestor.ListarIntervencoesVeterinario(listaVeterinarios);
                     break;
                 case 4:
+                    Gestor.ListarAnimaisVeterinario(listaVeterinarios,listaIntervencoes);
+                    break;
+                case 5:
+                    Gestor.ListarClientesVeterinario(listaVeterinarios,listaIntervencoes);
+                    break;
+                case 6:
+                    Gestor.removerVeterinario(listaVeterinarios);
                     break;
                 case 0:
                     System.exit(0);
@@ -143,7 +177,7 @@ public class Menus {
             }
         }while(op != 0);
     }
-    public static void menuPrincipal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes) {
+    public static void menuPrincipal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Intervencao> listaIntervencoes, ArrayList<Data> listaDatas){
         int op = 0;
 
         do {
@@ -158,16 +192,16 @@ public class Menus {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    //menuAnimal();
+                    menuAnimal(listaAnimal, listaClientes, listaVeterinarios, listaIntervencoes, listaDatas);
                     break;
                 case 2:
-                    //menuCliente();
+                    menuCliente(listaAnimal, listaClientes, listaVeterinarios, listaIntervencoes);
                     break;
                 case 3:
-                    //menuVeterinario();
+                    menuVeterinario(listaAnimal, listaClientes, listaVeterinarios, listaIntervencoes, listaDatas);
                     break;
                 case 4:
-                    //menuIntervencao();
+                    menuIntervencao(listaAnimal, listaClientes, listaVeterinarios, listaIntervencoes, listaDatas);
                     break;
                 case 0:
                     System.exit(0);

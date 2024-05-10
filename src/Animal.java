@@ -83,6 +83,11 @@ public class Animal implements Serializable{
     }
 
     public String toString(){
-        return "Animal: " + getId() + " " + getNome() + " " + getEspecie() + " " + getGenero() + " " + getPeso() + " " + getCliente().getNome();
+        return "Animal (Id: "+getId()+")\n" +
+                "Nome: " +getNome() + "\n " +
+                "Especie: " + getEspecie() + "\n " +
+                "Genero: " + getGenero() + "\n " +
+                "Peso: " + getPeso() + "\n " +
+                "Cliente: " + getCliente().getNome();
     }
 }

@@ -1,25 +1,37 @@
+import java.util.ArrayList;
+
 public class Horario {
-    private float Hora;
-    private boolean Disponibilidade;
+    private Data data;
+    private ArrayList<Horas> horas;
 
-    public Horario(float Hora, boolean Disponibilidade,int dia){
-        this.Hora = Hora;
-        this.Disponibilidade = Disponibilidade;
+    public Horario(Data data,float hora) {
+        this.data = data;
+        int indice = 1;
+        horas = new ArrayList<Horas>();
+        for (double i = 8; i < 18; i=i+0.5) {
+            if(i == 12){
+                i = 14;
+            }
+            horas.set(indice, new Horas((float)i,true));
+        }
+
     }
 
-    public float getHora() {
-        return Hora;
+
+
+    public Data getData() {
+        return data;
     }
 
-    public void setHora(int hora) {
-        Hora = hora;
+    public void setData(Data data) {
+        this.data = data;
     }
 
-    public boolean isDisponibilidade() {
-        return Disponibilidade;
+    public ArrayList<Horas> getHoras() {
+        return horas;
     }
 
-    public void setDisponibilidade(boolean disponibilidade) {
-        Disponibilidade = disponibilidade;
+    public void setHoras(ArrayList<Horas> horas) {
+        this.horas = horas;
     }
 }

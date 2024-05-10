@@ -10,7 +10,7 @@ public class Veterinario implements Serializable{
 
     private ArrayList<Intervencao> listaInterV;
 
-    private ArrayList<HorarioD> ListaHorario;
+    private ArrayList<Horario> ListaHorario;
 
     public Veterinario(int nif, String nome, int id_OrdemVet, int contacto){
         this.nif = nif;
@@ -18,7 +18,7 @@ public class Veterinario implements Serializable{
         this.id_OrdemVet = id_OrdemVet;
         this.contacto = contacto;
         listaInterV = new ArrayList<Intervencao>();
-        ListaHorario = new ArrayList<HorarioD>();
+        ListaHorario = new ArrayList<Horario>();
     }
 
     public int getNif() {
@@ -28,6 +28,10 @@ public class Veterinario implements Serializable{
     public void setNif(int nif) {
         this.nif = nif;
     }
+
+    public ArrayList<Horario> getHorario(){ return ListaHorario;};
+
+    public void setHorario(ArrayList<Horario> listaHorario) {this.ListaHorario = ListaHorario;};
 
     public String getNome() {
         return nome;

@@ -4,8 +4,8 @@ public class Cirurgia extends Intervencao implements Serializable{
 
     private int duracao;
 
-    public Cirurgia(Veterinario veterinario,Animal animal, float preco, boolean deslocacao,int duracao){
-        super(veterinario, animal,preco,deslocacao);
+    public Cirurgia(Veterinario veterinario,Animal animal, float preco, boolean deslocacao,Data data){
+        super(veterinario, animal,preco,deslocacao,data);
         duracao = 2;
     }
 
@@ -18,6 +18,6 @@ public class Cirurgia extends Intervencao implements Serializable{
     }
 
     public String toString(){
-        return "Cirurgia: " + getVeterinario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao();
+        return "Cirurgia: " + getVeterinario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao()+" "+ getData();
     }
 }
