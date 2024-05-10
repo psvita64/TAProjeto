@@ -66,6 +66,6 @@ public class Veterinario implements Serializable{
     }
 
     public String toString(){
-        return "Veterenario: " + getNif() + " " + getNome() + " " + getId_OrdemVet() + " " + getContacto();
+        return "Veterenario (Id: "+ getId_OrdemVet() + "): \n " + "Nome: "+getNome() + "\n Nif: " + getNif()  + "\n Contacto:  " + getContacto();
     }
 }

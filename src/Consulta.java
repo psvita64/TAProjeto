@@ -18,7 +18,13 @@ public class Consulta extends Intervencao implements Serializable{
     }
 
     public String toString(){
-        return "Consulta: " + getVeterinario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao()+ " "+ getData();
+    return "Consulta: \n" +
+            "Vet: " + getVeterinario().getNome() + "\n" +
+            "Animal: " + getAnimal().getNome() + "\n" +
+            "Preço: " + getPreco() + "\n" +
+            "Tem deslocação? " + isDeslocacao() + "\n" +
+            "Duração: " + getDuracao() + "\n" +
+            "Data: " + getData().getDia() + "/" + getData().getMes() + "\n ";
     }
 
 }

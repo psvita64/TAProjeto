@@ -18,6 +18,12 @@ public class Cirurgia extends Intervencao implements Serializable{
     }
 
     public String toString(){
-        return "Cirurgia: " + getVeterinario().getNome() + " " + getAnimal().getNome() + " " + getPreco() + " " + isDeslocacao() + " " + getDuracao()+" "+ getData();
+        return "Vacinação: \n" +
+                "Vet: " + getVeterinario().getNome() + "\n" +
+                "Animal: " + getAnimal().getNome() + "\n" +
+                "Preço: " + getPreco() + "\n" +
+                "Tem deslocação? " + isDeslocacao() + "\n" +
+                "Duração: " + getDuracao() + "\n" +
+                "Data: " + getData().getDia() + "/" + getData().getMes() + "\n ";
     }
 }

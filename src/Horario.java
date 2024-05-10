@@ -4,7 +4,7 @@ public class Horario {
     private Data data;
     private ArrayList<Horas> horas;
 
-    public Horario(Data data,float hora) {
+    public Horario(Data data) {
         this.data = data;
         int indice = 1;
         horas = new ArrayList<Horas>();
@@ -16,6 +16,8 @@ public class Horario {
         }
 
     }
+
+
 
 
 

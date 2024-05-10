@@ -22,10 +22,48 @@ public class Gestor {
             }else if (op == 3 && i instanceof Vacinacao){
                 lista.add(i);
             }
-        }
+        };
         return lista;
 
     }
+
+    public static void ListarAnimaisDeCliente( ArrayList<Animal> animais) {
+        boolean encontrado = false;
+
+        while (true) {
+            System.out.println("Insira o NIF do Cliente (ou 0 para sair):");
+            if (sc.hasNextInt()) {
+                int id = sc.nextInt();
+                if (id == 0) {
+                    System.out.println("Saindo da função...");
+                    return;
+                }
+                if (String.valueOf(id).length() == 9) {
+                    for (Animal a : animais) {
+                        if (a.getCliente().getNif() == id) {
+                            System.out.println("Nome: " + a.getNome() + " ID: " + a.getId());
+                            encontrado = true;
+                        }
+                    }
+
+                    if (encontrado) {
+                        break;
+                    } else {
+                        System.out.println("Nenhum animal encontrado para o NIF inserido. Tente novamente.");
+                    }
+                } else {
+                    System.out.println("Insira um NIF com 9 digitos.");
+                    sc.nextLine();
+                }
+            } else {
+                System.out.println("Por favor, insira um valor inteiro para o NIF.");
+                sc.nextLine();
+            }
+        }
+    }
+
+
+
     public static void listarIntervencoesAnimalFuturas(ArrayList<Intervencao> listaIntervencao, ArrayList<Cliente> listaclientes, ArrayList<Animal> listaAnimais, ArrayList<Data> listaData){
         int nif;
         do {
@@ -134,14 +172,19 @@ public class Gestor {
             System.out.println("3 - vacinação;");
             System.out.println("0 - Voltar\n");
             System.out.print("Opção: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Por favor, insira um número inteiro válido.");
+                sc.next();
+            }
             op = sc.nextInt();
             sc.nextLine();
             if (op == 1 || op == 2 || op == 3){
                 ArrayList<Intervencao> lista = ListarPorTipo(listaIntervencoes,op);
-                System.out.println("Intervenções: ");
+                System.out.println("\nIntervenções: \n");
                 for (Intervencao i : lista){
                     System.out.println(i.toString());
                 }
+                return;
             }else if(op == 0){
                 System.out.println("A voltar ...");
             }else {
@@ -201,24 +244,51 @@ public class Gestor {
             System.out.println("3 - vacinação;");
             System.out.println("0 - Voltar\n");
             System.out.print("Opção: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Por favor, insira um número inteiro válido.");
+                sc.next();
+            }
             op = sc.nextInt();
             sc.nextLine();
             if (op == 1 || op == 2 || op == 3){
                 System.out.println("Insira o dia da intervenção: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 dia = sc.nextInt();
                 sc.nextLine();
                 System.out.println("Insira o mês da intervenção: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 mes = sc.nextInt();
                 sc.nextLine();
                 if (DataExists(dia,mes,listaData)){
                     ArrayList<Intervencao> lista = ListarPorTipo(listaIntervencoes,op);
+                    if(lista.size() == 0){
+                        System.out.println("Não existem intervenções do tipo " + op + " na data " + dia + "/" + mes + ".");
+                    }
                     for (Intervencao i : lista){
                         if (i.getData().getDia() == dia && i.getData().getMes() == mes){
                             System.out.println(i.toString());
                         }
                     }
+                    return;
                 }else{
-                    System.out.println("Não existe intervenções na data " + dia + "/" +mes+ ".");
+                    Data data = new Data(dia,mes);
+                    ArrayList<Intervencao> lista = ListarPorTipo(listaIntervencoes,op);
+                    if(lista.size() == 0){
+                        System.out.println("Não existem intervenções do tipo " + op + " na data " + dia + "/" + mes + ".");
+
+                    }
+                    for (Intervencao i : lista){
+                        if (i.getData().getDia() == dia && i.getData().getMes() == mes){
+                            System.out.println(i.toString());
+                        }
+                    }
+                    return;
                 }
             }else if(op == 0){
                 System.out.println("A voltar ...");
@@ -227,7 +297,8 @@ public class Gestor {
             }
         }while(op != 0);
     }
-    public static boolean verificarDisponibilidade(ArrayList<Veterinario> listaVeterinarios, int id_ordem, Data data, float hora) {
+
+    public static boolean VerifyDispVeterinario(ArrayList<Veterinario> listaVeterinarios, int id_ordem, Data data, float hora){
         for (Veterinario v : listaVeterinarios) {
             if (v.getId_OrdemVet() == id_ordem) {
                 ArrayList<Horario> horarios = v.getHorario();
@@ -270,19 +341,32 @@ public class Gestor {
         Veterinario veterinario = null;
         Animal animal = null;
         float preco = 0,km = 0;
-        boolean deslocacao, verifyData = false, verifyDisponibilidade;
+        boolean deslocacao;
         Data data = null;
         do {
+
             System.out.println("Que tipo de intervenção pretende fazer?");
             System.out.println("1 - Consulta;");
             System.out.println("2 - Cirurgia;");
-            System.out.println("3 - vacinação;");
+            System.out.println("3 - Vacinação;");
             System.out.println("0 - Voltar\n");
             System.out.print("Opção: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Por favor, insira um número inteiro válido.");
+                sc.next();
+            }
             tipo = sc.nextInt();
             sc.nextLine();
+            if(tipo == 0){
+                System.out.println("A voltar ...");
+                break;
+            }
             do {
                 System.out.println("Insira o ID de ordem do veterinário: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 id_ordem = sc.nextInt();
                 sc.nextLine();
                 if (id_ordem <= 0) {
@@ -301,6 +385,10 @@ public class Gestor {
             }while (id_ordem <= 0 || veterinario == null); ;
             do {
                 System.out.println("Insira o Nif do cliente: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 nif = sc.nextInt();
                 sc.nextLine();
                 if (nif <= 9) {
@@ -309,14 +397,18 @@ public class Gestor {
                     for (Cliente c : listaClientes) {
                         if (c.getNif() == nif) {
                             System.out.println("\nCliente encontrado.\n");
+                            System.out.println("Animais do cliente: ");
                             for (Animal a : listaAnimais) {
                                 if (a.getCliente().getNif() == nif) {
-                                    System.out.println("Animais do cliente:");
-                                    System.out.println(a.toString());
+                                    System.out.println(a.getNome() + " ID: " + a.getId());
                                 }
                             }
                             do {
                                 System.out.println("Insira o ID do animal: ");
+                                while (!sc.hasNextInt()) {
+                                    System.out.println("Por favor, insira um número inteiro válido.");
+                                    sc.next();
+                                }
                                 id_Animal = sc.nextInt();
                                 sc.nextLine();
                                 for (Animal a : listaAnimais) {
@@ -338,6 +430,10 @@ public class Gestor {
             } while (nif <= 9);
             do{
                 System.out.println("Deseja deslocação?(1-Sim, 2-Não)");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 op = sc.nextInt();
                 sc.nextLine();
                 if (op != 1 && op != 2){
@@ -348,6 +444,10 @@ public class Gestor {
                 deslocacao = true;
                 do {
                     System.out.println("Insira o número de km: ");
+                    while (!sc.hasNextInt()) {
+                        System.out.println("Por favor, insira um número inteiro válido.");
+                        sc.next();
+                    }
                     km = sc.nextFloat();
                     sc.nextLine();
                     if (km <= 0) {
@@ -386,45 +486,63 @@ public class Gestor {
             }
             do {
                 System.out.println("Insira o dia da intervenção: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 dia = sc.nextInt();
                 sc.nextLine();
                 System.out.println("Insira o mês da intervenção: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 mes = sc.nextInt();
                 sc.nextLine();
                 System.out.println("Insira a hora da intervenção: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 hora = sc.nextInt();
                 sc.nextLine();
+                if(!DataExists(dia,mes,listaData)){
+                    Horario horario = new Horario(new Data(dia,mes));
+                    veterinario.getHorario().add(horario);
+                    listaData.add(new Data(dia,mes));
+                }
                 if (dia <= 0 || dia > 31) {
                     System.out.println("\n Dia inválido: Insira um valor entre 1 e 31.\n");
                 }else if (mes <= 0 || mes > 12) {
                     System.out.println("\n Mês inválido: Insira um valor entre 1 e 12.\n");
-                }else if (hora < 0 || hora > 24) {
+                }else if (hora < 8 || hora > 18) {
                     System.out.println("\n Hora inválida: Insira um valor entre 8 e 18.\n");
-                }
-                if(!verifyData){
-                    data = new Data(dia,mes);
-                }
-                if(!verificarDisponibilidade(listaVeterinarios,id_ordem,data,hora)) {
-                    System.out.println("Hora não disponível.");
+                }else if(!VerifyDispVeterinario(listaVeterinarios, id_ordem, data, hora)) {
+                    System.out.println("Hora não disponível. ("+ VerifyDispVeterinario(listaVeterinarios,id_ordem,data,hora)+")");
                     do {
                         System.out.println("Insira outra hora: ");
                         hora = sc.nextInt();
                         sc.nextLine();
-                    }while(verificarDisponibilidade(listaVeterinarios,id_ordem,data,hora));
+                    }while(!VerifyDispVeterinario(listaVeterinarios,id_ordem,data,hora));
 
                 }
-            }while (dia <= 0 || dia > 31);
+            }while (dia <= 0 || dia > 31 || mes <= 0 || mes > 12 || hora < 8 || hora > 18 || !VerifyDispVeterinario(listaVeterinarios,id_ordem,data,hora));
+
             do {
                 op = 0;
                 System.out.println("Confirma os dados da intervenção? (1- Sim, 2- Não)");
-                System.out.println("Veterinário: " + veterinario.getNome()+ "\n Animal: " + animal.getNome());
+                System.out.println("\nVeterinário: " + veterinario.getNome()+ "\nAnimal: " + animal.getNome());
                 if(deslocacao){
-                    System.out.println("Deslocação: Sim Kilometros: " + km);
+                    System.out.println("Deslocação: Sim \n Kilometros: " + km);
                 }else{
                     System.out.println("Deslocação: Não");
                 }
-                System.out.println("Data: " + dia + "/" + mes + " Hora: " + hora);
-                System.out.print("Opção: ");
+                System.out.println("Data: " + dia + "/" + mes + "\nHora: " + hora);
+                System.out.print("\nOpção: ");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro válido.");
+                    sc.next();
+                }
                 op = sc.nextInt();
                 sc.nextLine();
                 if(op != 1 && op != 2){
@@ -434,17 +552,22 @@ public class Gestor {
                         case 1:
                             intervencao.add(new Consulta(veterinario, animal, preco, deslocacao, data));
                             Mudardisponibilidade(listaVeterinarios,id_ordem,data,hora);
-                            break;
+                            System.out.println("Consulta adicionada com sucesso.");
+                            return;
                         case 2:
                             intervencao.add(new Cirurgia(veterinario, animal, preco, deslocacao, data));
                             for(float i = 0; i < 2; i+=0.5){
                                 Mudardisponibilidade(listaVeterinarios,id_ordem,data,hora+i);
                             }
-                            break;
+                            System.out.println("Cirurgia adicionada com sucesso.");
+                            tipo = 0;
+                            return;
                         case 3:
                             intervencao.add(new Vacinacao(veterinario, animal, preco, deslocacao, data));
                             Mudardisponibilidade(listaVeterinarios,id_ordem,data,hora);
-                            break;
+                            System.out.println("Vacinação adicionada com sucesso.");
+                            tipo = 0;
+                            return;
                     }
                 }
             }while(op != 1 && op != 2);
@@ -509,16 +632,33 @@ public class Gestor {
         System.out.println("Insira a rua do cliente: ");
         rua = sc.nextLine();
 
-        System.out.println("Insira o numero da rua do cliente:");
-        numero = sc.nextInt();
-        sc.nextLine(); // Limpar o buffer
+
+        System.out.println("Insira a numero da rua do cliente : ");
+        while (true) {
+            if (sc.hasNextInt()) {
+                numero = sc.nextInt();
+                sc.nextLine(); // Limpar o buffer
+                break;
+            } else {
+                System.out.println("Por favor, insira apenas o número da rua.");
+                sc.nextLine(); // Limpar o buffer
+            }
+        }
 
         System.out.println("Insira a localidade do cliente: ");
         localidade = sc.nextLine();
 
-        System.out.println("Insira o código postal do cliente: ");
-        codPostal = sc.nextInt();
-        sc.nextLine(); // Limpar o buffer
+        System.out.println("Insira o código postal do cliente (apenas números): ");
+        while (true) {
+            if (sc.hasNextInt()) {
+                codPostal = sc.nextInt();
+                sc.nextLine(); // Limpar o buffer
+                break;
+            } else {
+                System.out.println("Por favor, insira apenas números para o código postal.");
+                sc.nextLine(); // Limpar o buffer
+            }
+        }
 
         clientes.add(new Cliente(nif, nome, new Morada(rua,numero,codPostal ,localidade), contacto));
         return null;
@@ -530,33 +670,37 @@ public class Gestor {
         }
     }
 
-    public static void RemoverCliente(ArrayList<Cliente> clientes){
+    public static void RemoverCliente(ArrayList<Cliente> clientes) {
         System.out.println("Insira o NIF do cliente que quer remover:");
-        int nif= sc.nextInt();
-        for (Cliente c : clientes){
-            if (c.getNif() == nif){
-                System.out.println("Cliente Econtrado :"+ c.getNome());
+        int nif = sc.nextInt();
+
+        Iterator<Cliente> iterator = clientes.iterator();
+        while (iterator.hasNext()) {
+            Cliente c = iterator.next();
+            if (c.getNif() == nif) {
+                System.out.println("Cliente Encontrado: " + c.getNome());
                 System.out.println("Remover?");
-                System.out.println("1-Sim");
-                System.out.println("2-Não");
+                System.out.println("1 - Sim");
+                System.out.println("2 - Não");
                 int op = sc.nextInt();
-                switch (op){
+                switch (op) {
                     case 1:
-                        clientes.remove(c);
+                        iterator.remove(); // Remove o cliente usando o iterador
                         System.out.println("Cliente removido com sucesso.");
-                        break;
+                        return; // Saia do método após remover o cliente
                     case 2:
-                        System.out.println("Operação cancelada,a voltar ao Menu.");
-                        break;
+                        System.out.println("Operação cancelada, a voltar ao Menu.");
+                        return; // Saia do método sem remover o cliente
                     default:
                         System.out.println("Opção inválida.");
-                        break;
+                        return; // Saia do método em caso de opção inválida
                 }
-
-
             }
         }
+        System.out.println("Cliente com NIF " + nif + " não encontrado.");
     }
+
+
     public static void ListarClienteEAnimais(ArrayList<Cliente> clientes, ArrayList<Animal> animais) {
         for (Cliente c : clientes) {
             System.out.print(c.getNome() + ":{");
@@ -566,7 +710,7 @@ public class Gestor {
                     if (!primeiroAnimal) {
                         System.out.print(",");
                     }
-                    System.out.print(a.getNome());
+                    System.out.print(a.getNome() + " Id:"+ a.getId());
                     primeiroAnimal = false;
                 }
             }
@@ -574,7 +718,11 @@ public class Gestor {
         }
     }
 
-    public static Animal criarAnimal( ArrayList<Animal> listaAnimais, ArrayList<Cliente> listaClientes){
+    public static void criarAnimal( ArrayList<Animal> listaAnimais, ArrayList<Cliente> listaClientes){
+        if (listaClientes.size() == 0){
+            System.out.println("\nErro: Para adicionar animais é necessário ter clientes.\n");
+            return;
+        }
         float peso;
         int id, nif, op;
         String nome, especie, genero;
@@ -597,6 +745,11 @@ public class Gestor {
         do {
             System.out.println("Gênero do animal:(1- Macho, 2- Fêmea)");
             System.out.print("Opção: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("\nPor favor, insira um número inteiro válido.\n");
+                sc.next();
+                System.out.print("Opção: ");
+            }
             op = sc.nextInt();
             sc.nextLine();
             if (op != 1 && op != 2) {
@@ -610,6 +763,11 @@ public class Gestor {
         }
         do{
             System.out.println("Peso do animal: ");
+            while (!sc.hasNextFloat()) {
+                System.out.println("\nPor favor, insira um número válido.\n");
+                sc.next();
+                System.out.print("Opção: ");
+            }
             peso = sc.nextFloat();
             sc.nextLine();
             if(peso <= 0){
@@ -618,6 +776,11 @@ public class Gestor {
         }while (peso <= 0);
         do {
             System.out.println("Introduza o nif do dono do animal: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("\nPor favor, insira um número inteiro válido.\n");
+                sc.next();
+                System.out.print("Opção: ");
+            }
             nif = sc.nextInt();
             sc.nextLine();
             if (nif < 9) {
@@ -627,15 +790,18 @@ public class Gestor {
                 if (c.getNif() == nif){
                     System.out.println("\nCliente encontrado.\n");
                     cliente = c;
+                    id = listaAnimais.size() + 1;
+                    Animal a = new Animal(id, nome, especie,genero, peso, cliente );
+                    System.out.println("\nAnimal criado com sucesso.\n");
+                    listaAnimais.add(a);
                     break;
                 }
             }
+            if(cliente == null){
+                System.out.println("\nNif inválido: Cliente não encontrado.\n");
+            }
         }while(nif < 9 && cliente == null);
-        id = listaAnimais.size() + 1;
-        Animal a = new Animal(id, nome, especie,genero, peso, cliente );
-        System.out.println("\nAnimal criado com sucesso.\n");
-        listaAnimais.add(a);
-        return a;
+
     }
 
     public static void listarAnimais(ArrayList<Animal> listaAnimais){
@@ -644,8 +810,8 @@ public class Gestor {
             System.out.println("Não existem animais.");
         }else {
             for (Animal a : listaAnimais) {
-                System.out.println("1:");
                 System.out.println(a.toString());
+                System.out.println("\n");
             }
         }
     }
@@ -702,11 +868,11 @@ public class Gestor {
         return false;
     }
 
-    public static void CriarVeterinario(Scanner sc, ArrayList<Veterinario> veterinarios){
+    public static void CriarVeterinario(ArrayList<Veterinario> veterinarios){
         int nif = 0, contacto, numero, codPostal;
         String nome,rua,localidade;
+        System.out.println("Insira o NIF do veterinário (9 dígitos): ");
         while (true) {
-            System.out.println("Insira o NIF do veterinário (9 dígitos): ");
             if (sc.hasNextInt()) {
                 nif = sc.nextInt();
                 if (String.valueOf(nif).length() == 9 && !nifExistsV(nif, veterinarios)) {
@@ -715,7 +881,7 @@ public class Gestor {
                     System.out.println("O NIF deve conter 9 dígitos e não estar na lista de veterinários. Tente novamente.");
                 }
             } else {
-                System.out.println("Por favor, insira um valor inteiro para o NIF.");
+                System.out.println("\nPor favor, insira um valor inteiro para o NIF.\n");
                 sc.next(); // Limpar o buffer
             }
         }
@@ -744,8 +910,11 @@ public class Gestor {
             count++;
         }
         count ++;
+        Veterinario vet = new Veterinario(nif, nome, count, contacto);
+        veterinarios.add( vet);
 
-        veterinarios.add(new Veterinario(nif, nome, count, contacto));
+
+        System.out.println("Veterinário criado com sucesso.");
 
     }
 
@@ -756,25 +925,37 @@ public class Gestor {
     }
 
     public static void ListarIntervencoesVeterinario(ArrayList<Veterinario> veterinarios){
+        if(veterinarios.size() == 0){
+            System.out.println("Não existem veterinários.");
+            return;
+        }
         System.out.println("Insira o ID do Veterinario: (0-Voltar)");
+        while (!sc.hasNextInt()) {
+            System.out.println("Por favor, insira um número inteiro.");
+            sc.next(); // Limpa o buffer
+        }
         int id = sc.nextInt();
         while (id != 0){
             for (Veterinario v : veterinarios){
                 if (v.getId_OrdemVet() == id){
                     System.out.println("Veterinario Encontrado: "+v.getNome());
                     System.out.println("Intervenções:");
+                    if(v.getListaInter().size() == 0) {
+                        System.out.println("Não existem intervenções.");
+                    }
                     for (Intervencao i : v.getListaInter()){
                         System.out.println(i.toString());
                     }
+                    id=0;
+                }else{
+                    System.out.println("Veterinario não encontrado.");
+
                 }
             }
-            System.out.println("Insira o ID do Veterinario: (0-Voltar)");
-            id = sc.nextInt();
         }
 
     }
 
-    //TODO fazer esta funcao
     public static void getListaConsultas(ArrayList<Intervencao> listaIntervencoes, ArrayList<Animal> listaAnimais, int idVet){
         for (Animal a : listaAnimais){
             for (Intervencao i : listaIntervencoes){
@@ -827,7 +1008,6 @@ public class Gestor {
                 if (v.getId_OrdemVet() == id){
                     encontrou = true;
                     System.out.println("Veterinario Encontrado: "+v.getNome());
-                    System.out.println("Animais:");
                     Set<Integer> animaisSet = new HashSet<>();
                     for (Intervencao i : listaIntervencoes){
                         if (i.getVeterinario().getId_OrdemVet() == id) {
@@ -843,7 +1023,10 @@ public class Gestor {
                             }
                         }
                         if (animal != null) {
+                            System.out.println("Animais:");
                             System.out.println(animal.toString());
+                        }else{
+                            System.out.println("Não existem animais.");
                         }
                     }
                 }
@@ -852,7 +1035,6 @@ public class Gestor {
                 System.out.println("Veterinario não encontrado.");
             }
             System.out.println("Insira o ID do Veterinario: (0-Voltar)");
-
             sc.nextLine();
 
             while (!sc.hasNextInt()) {
@@ -879,7 +1061,6 @@ public class Gestor {
                 if (v.getId_OrdemVet() == id) {
                     encontrou = true;
                     System.out.println("Veterinario Encontrado: " + v.getNome());
-                    System.out.println("Clientes:");
                     Set<Integer> clientesSet = new HashSet<>();
                     for (Intervencao i : listaIntervencoes) {
                         if (i.getVeterinario().getId_OrdemVet() == id) {
@@ -895,7 +1076,10 @@ public class Gestor {
                             }
                         }
                         if (cliente != null) {
+                            System.out.println("Clientes:");
                             System.out.println(cliente.toString());
+                        }else {
+                            System.out.println("Não existem clientes.");
                         }
                     }
                 }
@@ -925,19 +1109,39 @@ public class Gestor {
             sc.next();
         }
         int id = sc.nextInt();
-
+        Iterator<Veterinario> iterator = veterinarios.iterator();
         for (Veterinario v : veterinarios) {
             if (v.getId_OrdemVet() == id) {
-                veterinarios.remove(v);
-                System.out.println("Veterinário removido com sucesso.");
-                return;
+                System.out.println("Veterinario Encontrado: " + v.getNome());
+                System.out.println("Remover?");
+                System.out.println("1 - Sim");
+                System.out.println("2 - Não");
+                while (!sc.hasNextInt()) {
+                    System.out.println("Por favor, insira um número inteiro.");
+                    sc.next();
+                }
+                int op = sc.nextInt();
+                switch (op) {
+                    case 1:
+                        iterator.remove(); // Remove o cliente usando o iterador
+                        System.out.println("Veterinario removido com sucesso.");
+                        return; // Saia do método após remover o cliente
+                    case 2:
+                        System.out.println("Operação cancelada, a voltar ao Menu.");
+                        return; // Saia do método sem remover o cliente
+                    default:
+                        System.out.println("Opção inválida.");
+                        return; // Saia do método em caso de opção inválida
+                }
             }
         }
         System.out.println("Veterinário não encontrado.");
     }
 
 
-    public static void RemoverAnimal(ArrayList<Animal> listaAnimal){
+    public static void RemoverAnimal(ArrayList<Animal> listaAnimal, ArrayList<Cliente> listaClientes){
+        int op = 0;
+        ListarClienteEAnimais(listaClientes, listaAnimal);
         System.out.println("Insira o ID do animal que quer remover:");
 
 
@@ -950,30 +1154,31 @@ public class Gestor {
         for (Animal a : listaAnimal){
             if (a.getId() == id){
                 System.out.println("Animal Encontrado: " + a.getNome());
-                System.out.println("Remover?");
-                System.out.println("1 - Sim");
-                System.out.println("2 - Não");
-                int op;
+                do {
+                    System.out.println("Remover?");
+                    System.out.println("1 - Sim");
+                    System.out.println("2 - Não");
 
-                while (!sc.hasNextInt()) {
-                    System.out.println("Por favor, insira um número inteiro para a opção.");
-                    sc.next();
-                }
-                op = sc.nextInt();
+                    while (!sc.hasNextInt()) {
+                        System.out.println("\nPor favor, insira um número inteiro para a opção.\n");
+                        sc.next();
+                    }
+                    op = sc.nextInt();
 
-                switch (op){
-                    case 1:
-                        listaAnimal.remove(a);
-                        System.out.println("Animal removido com sucesso.");
-                        break;
-                    case 2:
-                        System.out.println("Operação cancelada, voltando ao Menu.");
-                        break;
-                    default:
-                        System.out.println("Opção inválida.");
-                        break;
-                }
-                return;
+                    switch (op) {
+                        case 1:
+                            listaAnimal.remove(a);
+                            System.out.println("Animal removido com sucesso.");
+                            break;
+                        case 2:
+                            System.out.println("Operação cancelada, voltando ao Menu.");
+                            break;
+                        default:
+                            System.out.println("Opção inválida.");
+                            break;
+                    }
+                    return;
+                } while (op != 1 && op != 2);
             }
         }
         System.out.println("Animal não encontrado.");
