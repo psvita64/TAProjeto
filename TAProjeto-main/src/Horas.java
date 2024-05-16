@@ -7,6 +7,12 @@ public class Horas {
         this.Disponibilidade = Disponibilidade;
     }
 
+    public boolean isLivre(){
+        return Disponibilidade;
+    }
+
+
+
     public Float getHora() {
         return Hora;
     }
@@ -22,4 +28,10 @@ public class Horas {
     public void setDisponibilidade(boolean Disponibilidade) {
         this.Disponibilidade = Disponibilidade;
     }
+
+    public String toString() {
+        return String.format("%.2f", Hora) + (Disponibilidade ? " (Livre)" : " (Ocupado)");
+    }
+
 }
+

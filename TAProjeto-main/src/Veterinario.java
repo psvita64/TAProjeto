@@ -68,4 +68,12 @@ public class Veterinario implements Serializable{
     public String toString(){
         return "Veterenario (Id: "+ getId_OrdemVet() + "): \n " + "Nome: "+getNome() + "\n Nif: " + getNif()  + "\n Contacto:  " + getContacto();
     }
+    public boolean isHorarioLivre(Data data, float hora) {
+        for (Horario horario : ListaHorario) {
+            if (horario.getData().equals(data)) {
+                return horario.isHoraLivre(hora, data);
+            }
+        }
+        return false; // Caso a data não seja encontrada nos horários do veterinário
+    }
 }

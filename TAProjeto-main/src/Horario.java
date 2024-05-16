@@ -8,17 +8,45 @@ public class Horario {
         this.data = data;
         int indice = 1;
         horas = new ArrayList<Horas>();
-        for (double i = 8; i < 18; i=i+0.5) {
+        for (double i = 8; i < 19; i=i+0.5) {
             if(i == 12){
                 i = 14;
             }
-            horas.set(indice, new Horas((float)i,true));
+            horas.add(new Horas((float)i,true));
         }
 
     }
 
+    public ArrayList<Horas> getHorasLivres(){
+        ArrayList<Horas> horasLivres = new ArrayList<Horas>();
+        for(Horas h : horas){
+            if(h.isLivre()){
+                horasLivres.add(h);
+            }
+        }
+        return horasLivres;
+    }
 
+    public boolean isHoraLivre(float hora, Data data) {
+        if (!this.data.equals(data)) {
+            return false; // A data não coincide
+        }
+        for (Horas h : horas) {
+            if (h.getHora() == hora) {
+                return h.isLivre();
+            }
+        }
+        return false; // Caso a hora não seja encontrada
+    }
 
+    public void marcarHoraComoOcupada(float hora) {
+        for (Horas h : horas) {
+            if (h.getHora() == hora) {
+                h.setDisponibilidade(false);
+                return;
+            }
+        }
+    }
 
 
     public Data getData() {
@@ -36,4 +64,6 @@ public class Horario {
     public void setHoras(ArrayList<Horas> horas) {
         this.horas = horas;
     }
+
+
 }

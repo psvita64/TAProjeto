@@ -26,5 +26,18 @@ public class Data {
         this.mes = mes;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Data data = (Data) obj;
+        return dia == data.dia && mes == data.mes;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%02d/%02d", dia, mes);
+    }
+
 
 }

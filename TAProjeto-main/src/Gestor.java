@@ -299,15 +299,25 @@ public class Gestor {
     }
 
     public static boolean VerifyDispVeterinario(ArrayList<Veterinario> listaVeterinarios, int id_ordem, Data data, float hora){
+        System.out.println("Entrou na funcao");
         for (Veterinario v : listaVeterinarios) {
+            System.out.println("Procura o Vet id:");
             if (v.getId_OrdemVet() == id_ordem) {
+                System.out.println("Encontrou o ID + "+ id_ordem);
                 ArrayList<Horario> horarios = v.getHorario();
+                System.out.println("Encontrou os horarios + "+ horarios.size());
                 for (Horario horario : horarios) {
+                    System.out.println("Procura a data + ");
                     if (horario.getData().equals(data)) {
+                        System.out.println("Encontrou a data + "+ data.getDia() + " " + data.getMes() + ";");
                         ArrayList<Horas> horas = horario.getHoras();
+                        System.out.println("Conseguimos horas + "+ horas.size() + ";");
                         for (Horas h : horas) {
+                            System.out.println("Procura a hora + "+ hora + ";)");
                             if (h.getHora() == hora) {
+                                System.out.println("Encontrou a hora + "+ hora + ";");
                                 return h.isDisponibilidade();
+
                             }
                         }
                     }
@@ -336,6 +346,16 @@ public class Gestor {
 
     }
 
+    public static Horario getHorarioByData(Data data, ArrayList<Horario> listaHorario) {
+        for (Horario h : listaHorario) {
+            if (h.getData().equals(data)) {
+                return h;
+            }
+        }
+        return null;
+    }
+
+
     public static void addIntervencao(ArrayList<Intervencao> intervencao, ArrayList<Cliente> listaClientes, ArrayList<Veterinario> listaVeterinarios, ArrayList<Animal> listaAnimais, ArrayList<Data> listaData){
         int tipo, dia, mes, hora, nif, id_ordem,id_Animal, op;
         Veterinario veterinario = null;
@@ -343,6 +363,8 @@ public class Gestor {
         float preco = 0,km = 0;
         boolean deslocacao;
         Data data = null;
+        Data d;
+        Horario horario;
         do {
 
             System.out.println("Que tipo de intervenção pretende fazer?");
@@ -506,10 +528,14 @@ public class Gestor {
                 }
                 hora = sc.nextInt();
                 sc.nextLine();
+                d = new Data(dia,mes);
                 if(!DataExists(dia,mes,listaData)){
-                    Horario horario = new Horario(new Data(dia,mes));
+                    horario = new Horario(d);
                     veterinario.getHorario().add(horario);
-                    listaData.add(new Data(dia,mes));
+                    listaData.add(d);
+                }else {
+                     horario = getHorarioByData(d, veterinario.getHorario());
+                     System.out.println("Horario: " + horario.getHorasLivres());
                 }
                 if (dia <= 0 || dia > 31) {
                     System.out.println("\n Dia inválido: Insira um valor entre 1 e 31.\n");
@@ -517,16 +543,16 @@ public class Gestor {
                     System.out.println("\n Mês inválido: Insira um valor entre 1 e 12.\n");
                 }else if (hora < 8 || hora > 18) {
                     System.out.println("\n Hora inválida: Insira um valor entre 8 e 18.\n");
-                }else if(!VerifyDispVeterinario(listaVeterinarios, id_ordem, data, hora)) {
-                    System.out.println("Hora não disponível. ("+ VerifyDispVeterinario(listaVeterinarios,id_ordem,data,hora)+")");
+                }else if(!horario.isHoraLivre(hora, d)){
+                    System.out.println("Hora não disponível.");
                     do {
                         System.out.println("Insira outra hora: ");
                         hora = sc.nextInt();
                         sc.nextLine();
-                    }while(!VerifyDispVeterinario(listaVeterinarios,id_ordem,data,hora));
+                    }while(!horario.isHoraLivre(hora, d));
 
                 }
-            }while (dia <= 0 || dia > 31 || mes <= 0 || mes > 12 || hora < 8 || hora > 18 || !VerifyDispVeterinario(listaVeterinarios,id_ordem,data,hora));
+            }while (dia <= 0 || dia > 31 || mes <= 0 || mes > 12 || hora < 8 || hora > 18);
 
             do {
                 op = 0;
@@ -551,20 +577,20 @@ public class Gestor {
                     switch (tipo) {
                         case 1:
                             intervencao.add(new Consulta(veterinario, animal, preco, deslocacao, data));
-                            Mudardisponibilidade(listaVeterinarios,id_ordem,data,hora);
+                            horario.marcarHoraComoOcupada(hora);
                             System.out.println("Consulta adicionada com sucesso.");
                             return;
                         case 2:
                             intervencao.add(new Cirurgia(veterinario, animal, preco, deslocacao, data));
                             for(float i = 0; i < 2; i+=0.5){
-                                Mudardisponibilidade(listaVeterinarios,id_ordem,data,hora+i);
+                                horario.marcarHoraComoOcupada(hora+i);
                             }
                             System.out.println("Cirurgia adicionada com sucesso.");
                             tipo = 0;
                             return;
                         case 3:
                             intervencao.add(new Vacinacao(veterinario, animal, preco, deslocacao, data));
-                            Mudardisponibilidade(listaVeterinarios,id_ordem,data,hora);
+                            horario.marcarHoraComoOcupada(hora);
                             System.out.println("Vacinação adicionada com sucesso.");
                             tipo = 0;
                             return;
