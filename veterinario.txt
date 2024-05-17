@@ -1,0 +1,8 @@
+Veterenario (Id: 1): 
+ Nome: Joao
+ Nif: 987018472
+ Contacto:  931876172
+Veterenario (Id: 2): 
+ Nome: Dr Rui
+ Nif: 972518816
+ Contacto:  912581295

@@ -1,0 +1,16 @@
+Vacinação: 
+Vet: Joao
+Animal: Diogo
+Preço: 50.0
+Tem deslocação? false
+Duração: 2.0
+Data: 21/05
+ 
+Vacinação: 
+Vet: Dr Rui
+Animal: Rui
+Preço: 100.0
+Tem deslocação? false
+Duração: 2.0
+Data: 21/05
+ 

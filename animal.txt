@@ -1,0 +1,12 @@
+Animal (Id: 1)
+ Nome: Diogo
+ Especie: Burro
+ Genero: Macho
+ Peso: 5.0
+ Cliente: Marco Silva
+Animal (Id: 2)
+ Nome: Rui
+ Especie: Cao
+ Genero: Fêmea
+ Peso: 15.0
+ Cliente: Marco Silva

@@ -1,0 +1,16 @@
+Recibo: 
+ Veterinário: Joao
+ Cliente: Marco Silva
+ NIF: 123456789
+ ID Animal: 1
+ Intervenções: 
+ Preço Total (sem iva): 0.0
+ Preço Total (com iva): 0.0
+Recibo: 
+ Veterinário: Dr Rui
+ Cliente: Marco Silva
+ NIF: 123456789
+ ID Animal: 2
+ Intervenções: 
+ Preço Total (sem iva): 0.0
+ Preço Total (com iva): 0.0
