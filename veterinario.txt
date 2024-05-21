@@ -1,8 +1,16 @@
 Veterenario (Id: 1): 
- Nome: Joao
- Nif: 987018472
- Contacto:  931876172
+ Nome: joao
+ Nif: 123456789
+ Contacto:  123456789
 Veterenario (Id: 2): 
- Nome: Dr Rui
- Nif: 972518816
- Contacto:  912581295
+ Nome: Carlos da Silva
+ Nif: 123412341
+ Contacto:  912987123
+Veterenario (Id: 3): 
+ Nome: Diogo Alexandre
+ Nif: 982138584
+ Contacto:  918263729
+Veterenario (Id: 4): 
+ Nome: Rodrigo Neves
+ Nif: 182738239
+ Contacto:  917829123

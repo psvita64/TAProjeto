@@ -1,16 +1,848 @@
 Vacinação: 
-Vet: Joao
-Animal: Diogo
-Preço: 50.0
+Vet: Carlos da Silva
+Animal: rex
+Preço: 200.0
 Tem deslocação? false
 Duração: 2.0
 Data: 21/05
  
 Vacinação: 
-Vet: Dr Rui
-Animal: Rui
-Preço: 100.0
+Vet: Carlos da Silva
+Animal: Flor
+Preço: 400.0
 Tem deslocação? false
 Duração: 2.0
 Data: 21/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Neko
+Preço: 500.0
+Tem deslocação? false
+Duração: 30.0
+Data: 21/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Princessa
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Cao
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Tobias
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Biscoito
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Fluffy
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 21/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Muffin
+Preço: 445.0
+Tem deslocação? true
+Duração: 2.0
+Data: 21/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Chocolate
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 21/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Batata
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Mel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Fofinho
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 21/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Cacau
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 21/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Ruby
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 21/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ariel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Belle
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Claire
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Flor
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 21/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: rex
+Preço: 200.0
+Tem deslocação? false
+Duração: 2.0
+Data: 22/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Flor
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 22/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Flor
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 23/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Neko
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 22/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Princessa
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Cao
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Biscoito
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Fluffy
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 22/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Muffin
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Chocolate
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 22/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Batata
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Fofinho
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 22/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Ruby
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 22/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ariel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ariel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Claire
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Flor
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 22/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: rex
+Preço: 200.0
+Tem deslocação? false
+Duração: 2.0
+Data: 23/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Neko
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 23/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Princessa
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Princessa
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Cao
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Biscoito
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Fluffy
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 23/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Muffin
+Preço: 450.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Chocolate
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 23/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Mel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Fofinho
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Fofinho
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 23/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Cacau
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 23/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Ruby
+Preço: 158.0
+Tem deslocação? true
+Duração: 30.0
+Data: 23/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ariel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Belle
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Belle
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Claire
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Flor
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 23/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Flor
+Preço: 441.0
+Tem deslocação? true
+Duração: 2.0
+Data: 24/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Flor
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 24/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Neko
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 24/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Cao
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Princessa
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Tobias
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Biscoito
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Muffin
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Fluffy
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 24/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Muffin
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 24/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Chocolate
+Preço: 146.0
+Tem deslocação? true
+Duração: 30.0
+Data: 24/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Batata
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Mel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Fofinho
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 24/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Cacau
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 24/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Ruby
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 24/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ruby
+Preço: 75.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ariel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Claire
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Flor
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 24/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: rex
+Preço: 200.0
+Tem deslocação? false
+Duração: 2.0
+Data: 25/05
+ 
+Vacinação: 
+Vet: Carlos da Silva
+Animal: Flor
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 25/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Princessa
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Tobias
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Biscoito
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Carlos da Silva
+Animal: Muffin
+Preço: 25.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Fluffy
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 25/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Muffin
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 25/05
+ 
+Vacinação: 
+Vet: Diogo Alexandre
+Animal: Chocolate
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 25/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Nutella
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Mel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Fofinho
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Diogo Alexandre
+Animal: Mel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 25/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Cacau
+Preço: 400.0
+Tem deslocação? false
+Duração: 2.0
+Data: 25/05
+ 
+Vacinação: 
+Vet: Rodrigo Neves
+Animal: Ruby
+Preço: 100.0
+Tem deslocação? false
+Duração: 30.0
+Data: 25/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Ariel
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Belle
+Preço: 50.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Claire
+Preço: 75.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
+ 
+Consulta: 
+Vet: Rodrigo Neves
+Animal: Bacon
+Preço: 100.0
+Tem deslocação? false
+Duração: 0.5
+Data: 25/05
  

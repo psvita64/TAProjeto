@@ -1,1 +1,3 @@
-Nome: Marco Silva Nif: 123456789 Contacto: 931123123 Morada: Rua: 5 Numero: 5 Codigo Postal: 3515726 Localidade: Viseu
+Nome: joao Nif: 123456789 Contacto: 123456789 Morada: Rua: Rua Numero: 1 Codigo Postal: 123 Localidade: Cidade
+Nome: Ricardo Aparicio Nif: 987654321 Contacto: 931123123 Morada: Rua: Rua Vermelha Numero: 6 Codigo Postal: 3515726 Localidade: Viseu
+Nome: Diogo Cardoso Nif: 123123123 Contacto: 931321321 Morada: Rua: Rua Azul Numero: 4 Codigo Postal: 3515722 Localidade: Viseu

@@ -1,16 +1,848 @@
 Recibo: 
- Veterinário: Joao
- Cliente: Marco Silva
+ Veterinário: Carlos da Silva
+ Cliente: joao
  NIF: 123456789
  ID Animal: 1
- Intervenções: 
- Preço Total (sem iva): 0.0
- Preço Total (com iva): 0.0
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 200.0
+ Preço Total (com iva): 240.0
 Recibo: 
- Veterinário: Dr Rui
- Cliente: Marco Silva
+ Veterinário: Carlos da Silva
+ Cliente: joao
  NIF: 123456789
  ID Animal: 2
- Intervenções: 
- Preço Total (sem iva): 0.0
- Preço Total (com iva): 0.0
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 3
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 500.0
+ Preço Total (com iva): 600.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 4
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 5
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 6
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 7
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 9
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 10
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 445.0
+ Preço Total (com iva): 534.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 11
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 13
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 14
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 15
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 17
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 18
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 19
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 20
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 21
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 22
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 1
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 200.0
+ Preço Total (com iva): 240.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 2
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 2
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 3
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 4
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 5
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 7
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 9
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 10
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 11
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 13
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 15
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 18
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 19
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 19
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 21
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 22
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 1
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 200.0
+ Preço Total (com iva): 240.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 3
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 4
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 4
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 5
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 7
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 9
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 10
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 450.0
+ Preço Total (com iva): 540.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 11
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 14
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 15
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 15
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 17
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 18
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 158.0
+ Preço Total (com iva): 189.6
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 19
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 20
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 20
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 21
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 22
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 2
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 441.0
+ Preço Total (com iva): 529.2
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 2
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 3
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 5
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 4
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 6
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 7
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 8
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 9
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 10
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 11
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 146.0
+ Preço Total (com iva): 175.2
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 13
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 14
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 15
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 17
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 18
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 18
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 75.0
+ Preço Total (com iva): 90.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 19
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 21
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 22
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 1
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 200.0
+ Preço Total (com iva): 240.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 2
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 4
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 6
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 7
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Carlos da Silva
+ Cliente: joao
+ NIF: 123456789
+ ID Animal: 8
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 25.0
+ Preço Total (com iva): 30.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 9
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 10
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 11
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 12
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 14
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 15
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Diogo Alexandre
+ Cliente: Ricardo Aparicio
+ NIF: 987654321
+ ID Animal: 14
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 17
+ Tipo de Intervenção: Cirurgia
+ Preço Total (sem iva): 400.0
+ Preço Total (com iva): 480.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 18
+ Tipo de Intervenção: Vacinacao
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 19
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 20
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 50.0
+ Preço Total (com iva): 60.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 21
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 75.0
+ Preço Total (com iva): 90.0
+Recibo: 
+ Veterinário: Rodrigo Neves
+ Cliente: Diogo Cardoso
+ NIF: 123123123
+ ID Animal: 16
+ Tipo de Intervenção: Consulta
+ Preço Total (sem iva): 100.0
+ Preço Total (com iva): 120.0

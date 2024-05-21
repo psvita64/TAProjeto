@@ -1,12 +1,132 @@
 Animal (Id: 1)
- Nome: Diogo
- Especie: Burro
+ Nome: rex
+ Especie: labrador
  Genero: Macho
- Peso: 5.0
- Cliente: Marco Silva
+ Peso: 1.0
+ Cliente: joao
 Animal (Id: 2)
- Nome: Rui
+ Nome: Flor
  Especie: Cao
  Genero: Fêmea
  Peso: 15.0
- Cliente: Marco Silva
+ Cliente: joao
+Animal (Id: 3)
+ Nome: Neko
+ Especie: Gato
+ Genero: Macho
+ Peso: 15.0
+ Cliente: joao
+Animal (Id: 4)
+ Nome: Princessa
+ Especie: Cao
+ Genero: Macho
+ Peso: 30.0
+ Cliente: joao
+Animal (Id: 5)
+ Nome: Cao
+ Especie: Passaro
+ Genero: Macho
+ Peso: 3.0
+ Cliente: joao
+Animal (Id: 6)
+ Nome: Tobias
+ Especie: Cao
+ Genero: Macho
+ Peso: 24.0
+ Cliente: joao
+Animal (Id: 7)
+ Nome: Biscoito
+ Especie: Gato
+ Genero: Fêmea
+ Peso: 15.0
+ Cliente: joao
+Animal (Id: 8)
+ Nome: Muffin
+ Especie: Coelho
+ Genero: Macho
+ Peso: 7.0
+ Cliente: joao
+Animal (Id: 9)
+ Nome: Fluffy
+ Especie: Coelho
+ Genero: Fêmea
+ Peso: 11.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 10)
+ Nome: Muffin
+ Especie: Cao
+ Genero: Macho
+ Peso: 20.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 11)
+ Nome: Chocolate
+ Especie: Gato
+ Genero: Macho
+ Peso: 15.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 12)
+ Nome: Nutella
+ Especie: Gato
+ Genero: Fêmea
+ Peso: 16.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 13)
+ Nome: Batata
+ Especie: Cao
+ Genero: Macho
+ Peso: 15.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 14)
+ Nome: Mel
+ Especie: Gato
+ Genero: Fêmea
+ Peso: 13.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 15)
+ Nome: Fofinho
+ Especie: Coelho
+ Genero: Fêmea
+ Peso: 14.0
+ Cliente: Ricardo Aparicio
+Animal (Id: 16)
+ Nome: Bacon
+ Especie: Cao
+ Genero: Macho
+ Peso: 11.0
+ Cliente: Diogo Cardoso
+Animal (Id: 17)
+ Nome: Cacau
+ Especie: Gato
+ Genero: Fêmea
+ Peso: 15.0
+ Cliente: Diogo Cardoso
+Animal (Id: 18)
+ Nome: Ruby
+ Especie: Cao
+ Genero: Macho
+ Peso: 22.0
+ Cliente: Diogo Cardoso
+Animal (Id: 19)
+ Nome: Ariel
+ Especie: Gato
+ Genero: Macho
+ Peso: 17.0
+ Cliente: Diogo Cardoso
+Animal (Id: 20)
+ Nome: Belle
+ Especie: Cao
+ Genero: Fêmea
+ Peso: 16.0
+ Cliente: Diogo Cardoso
+Animal (Id: 21)
+ Nome: Claire
+ Especie: Porco da India
+ Genero: Macho
+ Peso: 10.0
+ Cliente: Diogo Cardoso
+Animal (Id: 22)
+ Nome: Flor
+ Especie: Cao
+ Genero: Fêmea
+ Peso: 15.0
+ Cliente: Diogo Cardoso
